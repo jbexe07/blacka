@@ -9,7 +9,7 @@
   if (!section) return;
 
   // ---- Ajustes ----
-  var PARTICLE_COLOR = [142, 29, 101]; // #8e1d65. Para o original, use [0, 0, 0] em fundo claro
+  var PARTICLE_COLOR = [9, 58, 86]; // #8e1d65. Para o original, use [0, 0, 0] em fundo claro
   var DENSITY = 0.1015;      // partículas por pixel² (0.0015 = 1 a cada ~670 px²)
   var MIN_PARTICLES = 150;
   var MAX_PARTICLES = 1600;  // teto, para não pesar em telas grandes
