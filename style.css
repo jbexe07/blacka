@@ -404,6 +404,8 @@ nav {
 /* ===== Contato ===== */
 .contato {
   padding: 50px 0px 50px 0px;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   gap: 32px;
