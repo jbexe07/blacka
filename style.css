@@ -425,6 +425,7 @@ nav {
 .mapa {
   margin-top: 24px;
   justify-content: center;
+  align-items: center;
 }
 
 .mapa iframe {
