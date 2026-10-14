@@ -1,0 +1,576 @@
+/* ===== Base ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Michroma", "Helvetica Neue", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ===== Cabeçalho e menu ===== */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.linha {
+  border: 0.5px solid black;
+  border-radius: 25px;
+  width: calc(100% - 24px);
+  max-width: 700px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  background: #F1F1F1;
+}
+
+.logo {
+  width: 30%;
+}
+
+.logo a {
+  display: block;
+}
+
+.logo img {
+  box-sizing: content-box;
+  height: 20px;
+  width: auto;
+  padding: 15px;
+  display: block;
+  margin: 0px auto;
+}
+
+nav {
+  width: 70%;
+  text-align: center;
+}
+
+.link {
+  color: #8e1d65;
+  display: inline-block;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #6b3fa0;
+}
+
+.contatbtn {
+  display: inline-block;
+  background: #8e1d65;
+  color: #F1F1F1;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.contatbtn:hover {
+  background-color: #6b3fa0;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.silk-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* camada escura sobre a seda, para o texto continuar legível */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+}
+
+.texthero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #F1F1F1;
+  padding: 0 24px;
+}
+
+.texthero h1 {
+  font-size: clamp(24px, 5vw, 48px);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.texthero p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  margin-bottom: 28px;
+}
+
+/* ===== Sobre ===== */
+.sobre {
+  padding: 50px 0px 50px 0px;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F1F1F1;
+}
+
+.textsobre {
+  width: 45%;
+  text-align: center;
+  color: #010101;
+  padding: 15px;
+}
+
+.textsobre h2 {
+  font-size: 24px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.textsobre p {
+  font-size: 16px;
+  margin-bottom: 28px;
+  padding: 15px;
+}
+
+.imgsobre {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgsobre img {
+  max-width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+/* ===== Diferenciais (com partículas) ===== */
+.diferenciais {
+  position: relative;
+  overflow: hidden;
+  background: #F1F1F1;
+  text-align: center;
+}
+
+.particles-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;            /* acima dos cards */
+  pointer-events: none;  /* cliques passam direto */
+  display: block;
+}
+
+.diferenciais h2,
+.lista-dif {
+  position: relative;
+  z-index: 1;
+}
+
+.diferenciais h2 {
+  padding-top: 50px;
+}
+
+/* grid: colunas iguais no desktop e empilhadas no celular, sem media query */
+.lista-dif {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 30px 90px;
+}
+
+.dif {
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid #1a1a1a;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.dif svg {
+  width: 30px;
+  margin: 30px;
+  color: #8e1d65;
+}
+
+.dif h3 {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.dif p {
+  padding: 0 24px 30px;
+}
+
+/* ===== Produtos (roda) ===== */
+.produtos {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.produtos h2 {
+  padding-top: 50px;
+}
+
+.chamada {
+  margin: 40px 0px 10px 0px;
+  font-size: 15px;
+}
+
+/* quando a roda está ativa, a lista de cards fica escondida */
+.roda-ativa .lista-produtos {
+  display: none;
+}
+
+.roda {
+  padding: 10px 24px 0;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-areas: "foto palco";
+  align-items: center;
+  gap: 24px 32px;
+  max-width: 900px;
+  margin: 0px auto;
+  text-align: left;
+}
+
+.roda-foto {
+  grid-area: foto;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.roda-foto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.roda-foto img.ativa {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.roda-palco-wrap {
+  grid-area: palco;
+  position: relative;
+  min-height: 380px;
+}
+
+.roda-palco {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+  user-select: none;
+  cursor: grab;
+  outline: none;
+  border-radius: 14px;
+}
+
+.roda-palco.arrastando {
+  cursor: grabbing;
+}
+
+.roda-palco:focus-visible {
+  outline: 2px solid #8e1d65;
+}
+
+.roda-trilha {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 25%, #000 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 25%, #000 75%, transparent 100%);
+}
+
+.roda-marcador {
+  position: absolute;
+  top: 50%;
+  left: calc(14% - 26px);
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border-radius: 50%;
+  background: #8e1d65;
+}
+
+.roda-item {
+  position: absolute;
+  top: 50%;
+  left: 14%;
+  transform-origin: left center;
+  white-space: nowrap;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1;
+  color: rgba(142, 29, 101, 0.45);
+}
+
+.roda-item.selecionado {
+  color: #8e1d65;
+}
+
+.roda-controles {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+}
+
+.roda-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #1a1a1a;
+  background: #F1F1F1;
+  color: #8e1d65;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* o script ainda cria este bloco; a descrição fica escondida */
+.roda-detalhe {
+  display: none;
+}
+
+/* ===== Contato ===== */
+.contato {
+  padding: 60px 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: #F1F1F1;
+}
+
+.contato-info {
+  width: 45%;
+  text-align: center;
+}
+
+.contato-info address {
+  font-style: normal;   /* o navegador deixa o address em itálico por padrão */
+  margin-top: 12px;
+}
+
+.mapa {
+  margin-top: 24px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 14px;
+  display: block;
+}
+
+.redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #8e1d65;
+  color: #F1F1F1;
+  transition: background-color 0.2s;
+}
+
+.redes a:hover {
+  background: #6b3fa0;
+}
+
+.redes svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;   /* o ícone usa a cor do texto (#F1F1F1) */
+}
+
+.formulario {
+  width: 55%;
+}
+
+.formulario form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.formulario label {
+  display: block;
+  margin: 16px 0 6px;
+  font-weight: 600;
+}
+
+.formulario label:first-child {
+  margin-top: 0;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.formulario button {
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  text-align: center;
+  background: #8e1d65;
+}
+
+.copy,
+.dev {
+  padding: 5px;
+  color: #F1F1F1;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 700px) {
+  .linha {
+    flex-direction: column;   /* logo em cima, menu embaixo */
+    border-radius: 20px;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  .logo,
+  nav {
+    width: 100%;
+  }
+
+  nav {
+    padding-bottom: 12px;
+  }
+
+  .link {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobre {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .textsobre,
+  .imgsobre {
+    width: 100%;
+  }
+
+  .roda {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "foto"
+      "palco";
+  }
+
+  .roda-palco-wrap {
+    min-height: 300px;
+  }
+
+  .contato {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contato-info,
+  .formulario {
+    width: 100%;
+  }
+}
+
+/* ===== Movimento reduzido ===== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .roda-foto img {
+    transition: none;
+  }
+}
