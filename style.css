@@ -69,7 +69,7 @@ nav {
 }
 
 .link {
-  color: #8e1d65;
+  color: #093A56;
   display: inline-block;
   padding: 15px;
   font-size: 14px;
@@ -84,7 +84,7 @@ nav {
 
 .contatbtn {
   display: inline-block;
-  background: #8e1d65;
+  background: #093A56;
   color: #F1F1F1;
   border: 1px solid black;
   border-radius: 20px;
@@ -242,7 +242,7 @@ nav {
 .dif svg {
   width: 30px;
   margin: 30px;
-  color: #8e1d65;
+  color: #093A56;
 }
 
 .dif h3 {
@@ -335,7 +335,7 @@ nav {
 }
 
 .roda-palco:focus-visible {
-  outline: 2px solid #8e1d65;
+  outline: 2px solid #093A56;
 }
 
 .roda-trilha {
@@ -355,7 +355,7 @@ nav {
   height: 14px;
   margin-top: -7px;
   border-radius: 50%;
-  background: #8e1d65;
+  background: #093A56;
 }
 
 .roda-item {
@@ -371,7 +371,7 @@ nav {
 }
 
 .roda-item.selecionado {
-  color: #8e1d65;
+  color: #093A56;
 }
 
 .roda-controles {
@@ -391,7 +391,7 @@ nav {
   border-radius: 50%;
   border: 1px solid #1a1a1a;
   background: #F1F1F1;
-  color: #8e1d65;
+  color: #093A56;
   font-size: 12px;
   cursor: pointer;
 }
@@ -449,7 +449,7 @@ nav {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #8e1d65;
+  background: #093A56;
   color: #F1F1F1;
   transition: background-color 0.2s;
 }
@@ -504,7 +504,7 @@ nav {
 /* ===== Rodapé ===== */
 .rodape {
   text-align: center;
-  background: #8e1d65;
+  background: #093A56;
 }
 
 .copy,
