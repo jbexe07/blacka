@@ -423,7 +423,8 @@ nav {
 }
 
 .mapa {
-  margin: 24px;
+  margin-top: 24px;
+  justify-content: center;
 }
 
 .mapa iframe {
