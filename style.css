@@ -427,6 +427,7 @@ nav {
 }
 
 .mapa iframe {
+  margin: 25px;
   width: 100%;
   height: 300px;
   border: 0;
