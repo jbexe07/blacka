@@ -7,7 +7,7 @@
   if (!hero) return;
 
   // ---- Ajustes ----
-  var COLOR = [202, 80, 19]; // cor da seda (#8e1d65). Original: [123, 116, 129]
+  var COLOR = [9, 58, 86]; // cor da seda (#8e1d65). Original: [123, 116, 129]
   var SCALE = 0.4;            // resolução interna em relação à tela (menor = mais leve)
   var MAX_SIDE = 720;         // limite do maior lado do canvas interno, em pixels
   var FPS = 30;               // quadros por segundo
